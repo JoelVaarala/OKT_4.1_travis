@@ -7,9 +7,8 @@ install:
     - pip3 install coverage
 
 script: 
-    - pytest
+    - coverage run -m --source=. pytest
     
 
 after_success:
-    - coverage run test_postinumerot.py
-    - coverage report
+    - coverage report -m
