@@ -5,7 +5,8 @@ python:
 
 script: 
     - pytest
-    - coverage run test_postinumerot.py
     
-after_success: 
+
+after_success:
+    - coverage run test_postinumerot.py
     - coverage report
