@@ -7,7 +7,13 @@ install:
     - pip3 install coverage
 
 script: 
+    # this runs all files
     - coverage run -m --source=. pytest
+    # result = 77%
+
+    # this runs just the test file
+    #- coverage run -m --source=test_postinumerot -m pytest test_postinumerot.py
+    # reuslt = 100%
         
 after_success:
     - coverage report -m
